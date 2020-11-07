@@ -2,29 +2,26 @@ package facebookSignUpAutomation;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+
 import org.testng.Assert;
 
 public class FbSignUpFunctions {
 
 	private FbEnvSetUp objEnvSetUp;
     
-	private By drpLocator1=By.id("month");
+	public FbSignUpFunctions(FbEnvSetUp fbenvSetUp) { 
 
-
-	public FbSignUpFunctions(FbEnvSetUp fbenvSetUp) {
-
-		this.objEnvSetUp = fbenvSetUp;
+		this.objEnvSetUp = fbenvSetUp; 
 	}
 
-	public void verifyFaceBookTitle() {
+	public void verifyFaceBookTitle() { 
 
 		String title = objEnvSetUp.getdriver().getTitle();
 
 		Assert.assertEquals(title, "Sign up for Facebook | Facebook");
+		
 		objEnvSetUp.getdriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
 	}
@@ -68,18 +65,24 @@ public class FbSignUpFunctions {
 	
 
 	 public void setDateOfBirthDropDown(String drpOptions) {
+		 
 			WebElement element = objEnvSetUp.getdriver().findElement(By.id("day"));
+			
 			FbUtility.selectDropDown(element, drpOptions);
 		}
 
 		public void setDateOfMonthDropDown(int index) {
+			
 			WebElement dropdownmonth = objEnvSetUp.getdriver().findElement(By.id("month"));
+			
 			FbUtility.selectDropDownOfMonth(dropdownmonth, index);
 			
 		}
 	
 		public void setMonthInDropdown(String drpOptions){
+			
 			WebElement element=objEnvSetUp.getdriver().findElement(By.id("month"));
+			
 			FbUtility.selectDropDown(element,drpOptions );
 			
 		}

@@ -1,14 +1,11 @@
 package facebookSignUpAutomation;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class FbSignUp extends FbEnvSetUp {
 
 	private FbSignUpFunctions objFbSignUpFunctions;
-
-	private By drpLocator = By.id("month");
 
 	@BeforeClass
 	public void initializeWbebEnvironment() {
@@ -23,19 +20,19 @@ public class FbSignUp extends FbEnvSetUp {
 
 		objFbSignUpFunctions.verifyFaceBookTitle();
 
-		objFbSignUpFunctions.setFirstName("vaibhav");
+		objFbSignUpFunctions.setFirstName(obj_Config.getProperty("FirstName"));
 
-		objFbSignUpFunctions.setLastName("Raut");
+		objFbSignUpFunctions.setLastName(obj_Config.getProperty("LastName"));
 
 		objFbSignUpFunctions.setMobileOrEmail(objFbSignUpFunctions.setMobileOrEmail("strMobileNumber"));
 
-		objFbSignUpFunctions.setpassword("A@1234");
+		objFbSignUpFunctions.setpassword(obj_Config.getProperty("password"));
 
-		objFbSignUpFunctions.setDateOfBirthDropDown("4");
+		objFbSignUpFunctions.setDateOfBirthDropDown(obj_Config.getProperty("DOB"));
 		
 		objFbSignUpFunctions.setMonthInDropdown(FbUtility.getRandomMonthInCalender());
 
-		objFbSignUpFunctions.setYearInDropDown(11);
+		objFbSignUpFunctions.setYearInDropDown(Integer.parseInt(obj_Config.getProperty("year")));
 
 		objFbSignUpFunctions.setGenderRadoiButton();
 
