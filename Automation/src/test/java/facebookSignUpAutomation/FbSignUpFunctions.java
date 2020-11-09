@@ -1,10 +1,16 @@
 package facebookSignUpAutomation;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import java.util.function.Function;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
 public class FbSignUpFunctions {
@@ -33,16 +39,32 @@ public class FbSignUpFunctions {
 		username.sendKeys(strFirstName);
 
 	}
-
-	public void setLastName(String strLastName) {
-
-		WebElement surname = objEnvSetUp.getdriver().findElement(By.name("lastname"));
-
-		surname.sendKeys(strLastName);
-
-	}
+	
 
 	
+	  public void setLastName(String strLastName) {
+	  
+	  WebElement surname =
+	  objEnvSetUp.getdriver().findElement(By.name("lastname"));
+	  
+	  surname.sendKeys(strLastName);
+	  
+	  }
+	 
+
+
+	
+	/*public void setLastName(String strLastName) {
+
+		By loc_LastName = By.name("lastName");
+
+		WebElement webElement = this.getfluentwait(loc_LastName);
+
+		webElement.sendKeys(strLastName);
+
+	}*/
+
+
 	public String setMobileOrEmail(String strMobileNumber) {
 
 		double randomDouble = Math.random();
@@ -105,4 +127,30 @@ public class FbSignUpFunctions {
 
 	}
 
+	
+	/*public WebElement getfluentwait(final By locator) {
+
+		WebElement webElement = objEnvSetUp.getdriver().findElement(locator);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(objEnvSetUp.getdriver())
+				.withTimeout(Duration.ofSeconds(35))
+				.pollingEvery(Duration.ofSeconds(3)).ignoring(NoSuchElementException.class);
+
+		return webElement = wait.until(new Function<WebDriver, WebElement>() {
+
+			public WebElement apply(WebDriver driver) {
+
+				return driver.findElement(locator);
+			}
+
+		}
+
+		);
+*/
+	//}
 }
+	
+	
+	
+
+	
+

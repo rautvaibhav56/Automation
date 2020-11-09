@@ -2,16 +2,16 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-06T14:57:38Z" name="Default suite" finished-at="2020-11-06T14:58:11Z" duration-ms="32825">
+  <suite started-at="2020-11-09T14:13:11Z" name="Default suite" finished-at="2020-11-09T14:13:25Z" duration-ms="13791">
     <groups>
     </groups>
-    <test started-at="2020-11-06T14:57:38Z" name="Default test" finished-at="2020-11-06T14:58:11Z" duration-ms="32825">
+    <test started-at="2020-11-09T14:13:11Z" name="Default test" finished-at="2020-11-09T14:13:25Z" duration-ms="13791">
       <class name="facebookSignUpAutomation.FbSignUp">
-        <test-method is-config="true" signature="initializeWbebEnvironment()[pri:0, instance:facebookSignUpAutomation.FbSignUp@6340e5f0]" started-at="2020-11-06T20:27:38Z" name="initializeWbebEnvironment" finished-at="2020-11-06T20:28:09Z" duration-ms="31161" status="PASS">
+        <test-method is-config="true" signature="initializeWbebEnvironment()[pri:0, instance:facebookSignUpAutomation.FbSignUp@6fdbe764]" started-at="2020-11-09T19:43:11Z" name="initializeWbebEnvironment" finished-at="2020-11-09T19:43:23Z" duration-ms="11416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWbebEnvironment -->
-        <test-method signature="registrationFcebook()[pri:0, instance:facebookSignUpAutomation.FbSignUp@6340e5f0]" started-at="2020-11-06T20:28:09Z" name="registrationFcebook" finished-at="2020-11-06T20:28:11Z" duration-ms="1641" status="PASS">
+        <test-method signature="registrationFcebook()[pri:0, instance:facebookSignUpAutomation.FbSignUp@6fdbe764]" started-at="2020-11-09T19:43:23Z" name="registrationFcebook" finished-at="2020-11-09T19:43:25Z" duration-ms="2340" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationFcebook -->
